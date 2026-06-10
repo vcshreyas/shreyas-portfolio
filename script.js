@@ -13,6 +13,7 @@ const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 const socialMenu = document.querySelector(".social-menu");
 const socialMenuButton = document.querySelector(".social-menu button");
+const miscVideoToggles = document.querySelectorAll(".misc-video-toggle");
 
 let roleIndex = 0;
 let charIndex = 0;
@@ -90,6 +91,42 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     socialMenu?.classList.remove("open");
   }
+});
+
+miscVideoToggles.forEach((button) => {
+  const video = button.previousElementSibling;
+
+  button.addEventListener("click", async () => {
+    if (!(video instanceof HTMLVideoElement)) {
+      return;
+    }
+
+    if (video.paused) {
+      video.muted = false;
+      try {
+        await video.play();
+        button.textContent = "Pause";
+        button.setAttribute("aria-label", "Pause video");
+      } catch {
+        button.textContent = "Play";
+        button.setAttribute("aria-label", "Play video with audio");
+      }
+    } else {
+      video.pause();
+      button.textContent = "Play";
+      button.setAttribute("aria-label", "Play video with audio");
+    }
+  });
+
+  video?.addEventListener("pause", () => {
+    button.textContent = "Play";
+    button.setAttribute("aria-label", "Play video with audio");
+  });
+
+  video?.addEventListener("play", () => {
+    button.textContent = "Pause";
+    button.setAttribute("aria-label", "Pause video");
+  });
 });
 
 typeRole();
