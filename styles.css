@@ -768,6 +768,22 @@ h1 {
   transform-origin: center;
 }
 
+.misc-video-frame .misc-audio-video {
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.misc-video-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000000;
+}
+
 .misc-video-toggle {
   position: absolute;
   right: 16px;
