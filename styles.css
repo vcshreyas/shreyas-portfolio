@@ -912,6 +912,10 @@ h1 {
   display: block;
 }
 
+.travel-top-row img:first-child {
+  object-position: center 22%;
+}
+
 .quote-caption {
   width: 620px;
   margin: 8px 0 14px;
