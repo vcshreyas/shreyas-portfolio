@@ -908,7 +908,7 @@ h1 {
   width: 225px;
   height: 282px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center bottom;
   display: block;
 }
 
