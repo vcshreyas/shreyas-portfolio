@@ -899,14 +899,14 @@ h1 {
 
 .travel-top-row {
   display: grid;
-  grid-template-columns: 270px 270px;
-  gap: 36px;
+  grid-template-columns: 225px 225px;
+  gap: 46px;
   align-items: start;
 }
 
 .travel-top-row img {
-  width: 270px;
-  height: 350px;
+  width: 225px;
+  height: 282px;
   object-fit: cover;
   object-position: center top;
   display: block;
