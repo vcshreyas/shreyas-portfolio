@@ -739,6 +739,9 @@ h1 {
 
 .misc-left img {
   width: 370px;
+  height: 697px;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -811,6 +814,9 @@ h1 {
 
 .misc-right img {
   width: 370px;
+  height: 697px;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -874,6 +880,9 @@ h1 {
 
 .travel-left img {
   width: 380px;
+  height: 530px;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -897,6 +906,9 @@ h1 {
 
 .travel-top-row img {
   width: 270px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -920,6 +932,9 @@ h1 {
 
 .travel-right img {
   width: 430px;
+  height: 530px;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
