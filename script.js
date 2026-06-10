@@ -94,7 +94,46 @@ document.addEventListener("keydown", (event) => {
 });
 
 miscVideoToggles.forEach((button) => {
-  const video = button.previousElementSibling;
+  const frame = button.closest(".misc-video-frame");
+  const video = frame?.querySelector(".misc-audio-video");
+  const canvas = frame?.querySelector(".misc-video-canvas");
+  const context = canvas?.getContext("2d");
+
+  function drawVideoFrame() {
+    if (!(video instanceof HTMLVideoElement) || !(canvas instanceof HTMLCanvasElement) || !context) {
+      return;
+    }
+
+    const width = frame.clientWidth;
+    const height = frame.clientHeight;
+    const pixelRatio = window.devicePixelRatio || 1;
+
+    if (canvas.width !== Math.round(width * pixelRatio) || canvas.height !== Math.round(height * pixelRatio)) {
+      canvas.width = Math.round(width * pixelRatio);
+      canvas.height = Math.round(height * pixelRatio);
+    }
+
+    context.save();
+    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+    context.clearRect(0, 0, width, height);
+    context.translate(width / 2, height / 2);
+    context.rotate(-Math.PI / 2);
+    try {
+      context.drawImage(video, -height / 2, -width / 2, height, width);
+    } catch {
+      context.restore();
+      return;
+    }
+    context.restore();
+
+    if (!video.paused && !video.ended) {
+      requestAnimationFrame(drawVideoFrame);
+    }
+  }
+
+  video?.addEventListener("loadeddata", drawVideoFrame);
+  video?.addEventListener("seeked", drawVideoFrame);
+  video?.load();
 
   button.addEventListener("click", async () => {
     if (!(video instanceof HTMLVideoElement)) {
@@ -105,6 +144,7 @@ miscVideoToggles.forEach((button) => {
       video.muted = false;
       try {
         await video.play();
+        drawVideoFrame();
         button.textContent = "Pause";
         button.setAttribute("aria-label", "Pause video");
       } catch {
@@ -124,6 +164,7 @@ miscVideoToggles.forEach((button) => {
   });
 
   video?.addEventListener("play", () => {
+    drawVideoFrame();
     button.textContent = "Pause";
     button.setAttribute("aria-label", "Pause video");
   });
