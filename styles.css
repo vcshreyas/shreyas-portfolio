@@ -41,6 +41,84 @@
   margin-top: 30px;
 }
 
+.certification-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.cert-logo {
+  width: 124px;
+  height: 76px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(13, 31, 54, 0.12);
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.cert-logo:hover,
+.cert-logo:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.14);
+}
+
+.cert-logo span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.cert-logo small {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cert-logo-hubspot span {
+  color: #ff5c35;
+  font-size: 1.2rem;
+}
+
+.cert-logo-linkedin {
+  background: #0a66c2;
+  color: #fff;
+  flex-direction: column;
+}
+
+.cert-logo-linkedin span {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+
+.cert-logo-linkedin small {
+  color: #fff;
+}
+
+.cert-logo-coursera span {
+  color: #0056d2;
+  font-size: 1.15rem;
+}
+
+.cert-logo-skilljar {
+  background: #18263d;
+}
+
+.cert-logo-skilljar span {
+  color: #fff;
+  font-size: 1.15rem;
+}
+
 @media (max-width: 760px) {
   .education .education-grid {
     grid-template-columns: 1fr;
@@ -53,6 +131,84 @@
   .certification-card {
     margin-top: 0;
   }
+}
+
+.certification-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.cert-logo {
+  width: 124px;
+  height: 76px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(13, 31, 54, 0.12);
+  background: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.cert-logo:hover,
+.cert-logo:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.14);
+}
+
+.cert-logo span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.cert-logo small {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cert-logo-hubspot span {
+  color: #ff5c35;
+  font-size: 1.2rem;
+}
+
+.cert-logo-linkedin {
+  background: #0a66c2;
+  color: #fff;
+  flex-direction: column;
+}
+
+.cert-logo-linkedin span {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: -0.05em;
+}
+
+.cert-logo-linkedin small {
+  color: #fff;
+}
+
+.cert-logo-coursera span {
+  color: #0056d2;
+  font-size: 1.15rem;
+}
+
+.cert-logo-skilljar {
+  background: #18263d;
+}
+
+.cert-logo-skilljar span {
+  color: #fff;
+  font-size: 1.15rem;
 }
 
 body.dark {
