@@ -12,6 +12,49 @@
   --media-bg: #ffffff;
 }
 
+/* Education page 7 alignment */
+.education .education-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.school-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.school-logo {
+  width: 74px;
+  height: 74px;
+  flex: 0 0 74px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid rgba(13, 31, 54, 0.12);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.08);
+}
+
+.certification-card {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+}
+
+@media (max-width: 760px) {
+  .education .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .school-card {
+    align-items: flex-start;
+  }
+
+  .certification-card {
+    margin-top: 0;
+  }
+}
+
 body.dark {
   --bg: #0f1724;
   --surface: #172234;
@@ -948,6 +991,34 @@ h1 {
 
 .education-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.education .education-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.school-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.school-logo {
+  width: 74px;
+  height: 74px;
+  flex: 0 0 74px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid rgba(13, 31, 54, 0.12);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.08);
+}
+
+.certification-card {
+  grid-column: 1 / -1;
+  margin-top: 30px;
 }
 
 .contact {
@@ -3642,4 +3713,47 @@ footer {
   .skills-showcase .skills-title-card { margin-left: auto; margin-right: auto; }
   .primary-logo-row { gap: 20px; }
   .creative-logo { width: 76px; height: 76px; }
+}
+
+/* Final education placement overrides */
+.education .education-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.school-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.school-logo {
+  width: 74px;
+  height: 74px;
+  flex: 0 0 74px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid rgba(13, 31, 54, 0.12);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.08);
+}
+
+.certification-card {
+  grid-column: 1 / -1;
+  margin-top: 30px;
+}
+
+@media (max-width: 760px) {
+  .education .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .school-card {
+    align-items: flex-start;
+  }
+
+  .certification-card {
+    margin-top: 0;
+  }
 }
