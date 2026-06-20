@@ -1108,7 +1108,7 @@ footer {
   margin: 0 auto;
 }
 .skills-showcase .skills-title-card {
-  width: 390px;
+  width: 470px;
   max-width: 100%;
   background: linear-gradient(90deg, #eff7ff 0%, #eaf3fb 100%);
   padding: 18px 16px 16px;
@@ -1118,10 +1118,11 @@ footer {
   margin: 0;
   color: #172339;
   font-family: "Times New Roman", Times, serif;
-  font-size: clamp(2.6rem, 5vw, 3.8rem);
+  font-size: clamp(2.6rem, 4.2vw, 3.45rem);
   line-height: .9;
   letter-spacing: 0;
   text-align: left;
+  white-space: nowrap;
 }
 .skills-showcase .skills-title-card p {
   margin: 14px 0 0;
@@ -1134,12 +1135,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 3vw, 42px);
+  gap: clamp(16px, 2.25vw, 28px);
   flex-wrap: wrap;
 }
 .primary-logo-row {
   min-height: 96px;
   margin: 0 auto 12px;
+  flex-wrap: nowrap;
 }
 .brand-logo, .creative-logo {
   flex: 0 0 auto;
@@ -1149,8 +1151,8 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
 }
 .excel-logo {
-  width: 96px;
-  height: 74px;
+  width: 86px;
+  height: 68px;
   position: relative;
   background: linear-gradient(90deg, #12723a 0 38%, #178c45 38% 64%, #20a15a 64%);
   border-radius: 5px;
@@ -1159,19 +1161,19 @@ footer {
 .excel-logo span {
   position: absolute;
   left: -22px;
-  width: 58px;
-  height: 58px;
+  width: 52px;
+  height: 52px;
   border-radius: 4px;
   background: #158647;
   color: #fff;
   font-weight: 900;
-  font-size: 2.35rem;
+  font-size: 2.1rem;
   display: grid;
   place-items: center;
 }
 .tableau-logo {
   color: #51799a;
-  font-size: 2.6rem;
+  font-size: 2.25rem;
   line-height: .52;
   letter-spacing: 7px;
   font-weight: 700;
@@ -1179,7 +1181,7 @@ footer {
 .powerbi-logo {
   align-items: flex-end;
   gap: 5px;
-  height: 82px;
+  height: 72px;
 }
 .powerbi-logo span {
   display: block;
@@ -1189,35 +1191,35 @@ footer {
 }
 .powerbi-logo span:nth-child(1) { height: 38px; }
 .powerbi-logo span:nth-child(2) { height: 58px; background: #ffc21a; }
-.powerbi-logo span:nth-child(3) { height: 82px; background: #f3a300; }
+.powerbi-logo span:nth-child(3) { height: 72px; background: #f3a300; }
 .analytics-logo {
   gap: 12px;
   color: #6d6d6d;
-  font-size: 1.3rem;
+  font-size: 1.12rem;
   white-space: nowrap;
 }
 .ga-bars {
   display: inline-flex;
   align-items: flex-end;
   gap: 5px;
-  height: 78px;
+  height: 70px;
 }
 .ga-bars i:first-child { width: 31px; height: 28px; border-radius: 6px; background: #ffc400; }
 .ga-bars i:last-child { width: 31px; height: 78px; border-radius: 6px; background: linear-gradient(#ff7900,#ffb000); }
 .hubspot-logo {
-  width: 92px;
-  height: 92px;
+  width: 78px;
+  height: 78px;
   border: 3px solid #111;
   border-radius: 50%;
   color: #52606d;
-  font-size: 1.35rem;
+  font-size: 1.12rem;
   font-weight: 800;
 }
 .hubspot-logo span { color: #f47a3d; }
 .asana-logo {
   gap: 12px;
   color: #263548;
-  font-size: 3.1rem;
+  font-size: 2.65rem;
   font-weight: 500;
   letter-spacing: 0;
 }
@@ -1238,8 +1240,8 @@ footer {
 .asana-dots i:nth-child(2) { left: 0; top: 32px; }
 .asana-dots i:nth-child(3) { right: 0; top: 32px; }
 .sharepoint-logo {
-  width: 86px;
-  height: 82px;
+  width: 76px;
+  height: 76px;
   position: relative;
 }
 .sp-bubble, .sp-bubble::before, .sp-bubble::after {
@@ -1340,6 +1342,7 @@ footer {
   transform: skewX(-18deg);
 }
 @media (max-width: 980px) {
+  .primary-logo-row { flex-wrap: wrap; }
   .skills-card-band { grid-template-columns: repeat(2, 1fr); }
   .skills-showcase { padding-left: 5vw; padding-right: 5vw; }
 }
