@@ -239,6 +239,12 @@
   min-height: auto;
 }
 
+/* Keep the projects section compact once the cards end */
+#projects.section-panel {
+  min-height: auto;
+  padding-bottom: clamp(36px, 5vw, 58px);
+}
+
 .certification-logo-row {
   display: flex;
   align-items: center;
