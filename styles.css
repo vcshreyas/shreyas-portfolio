@@ -133,6 +133,43 @@
   }
 }
 
+/* Exact Canva certification logo strip with individual clickable areas */
+.cert-canva-strip-row {
+  position: relative;
+  display: block;
+  width: min(700px, 100%);
+  margin: 24px auto 0;
+}
+
+.cert-canva-strip {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cert-hotspot {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 14.285%;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.cert-hotspot:hover,
+.cert-hotspot:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.cert-hotspot-1 { left: 0; }
+.cert-hotspot-2 { left: 14.285%; }
+.cert-hotspot-3 { left: 28.57%; }
+.cert-hotspot-4 { left: 42.855%; }
+.cert-hotspot-5 { left: 57.14%; }
+.cert-hotspot-6 { left: 71.425%; }
+.cert-hotspot-7 { left: 85.71%; }
+
 .certification-logo-row {
   display: flex;
   align-items: center;
