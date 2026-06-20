@@ -234,6 +234,11 @@
   }
 }
 
+/* Remove unused blank space at the bottom of project cards */
+.project-card {
+  min-height: auto;
+}
+
 .certification-logo-row {
   display: flex;
   align-items: center;
