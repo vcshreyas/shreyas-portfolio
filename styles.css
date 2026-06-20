@@ -170,6 +170,70 @@
 .cert-hotspot-6 { left: 71.425%; }
 .cert-hotspot-7 { left: 85.71%; }
 
+/* Individual certification logos supplied by the user */
+.cert-image-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 3vw, 34px);
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.cert-image-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.cert-image-logo:hover,
+.cert-image-logo:focus-visible {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 12px 16px rgba(15, 23, 42, 0.14));
+  outline: 2px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.cert-image-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.cert-image-logo-powerbi img {
+  max-width: 78px;
+  max-height: 78px;
+}
+
+.cert-image-logo-ai {
+  width: 96px;
+}
+
+.cert-image-logo-ai img {
+  max-width: 96px;
+}
+
+@media (max-width: 640px) {
+  .cert-image-logo-row {
+    gap: 16px;
+  }
+
+  .cert-image-logo {
+    width: 72px;
+    height: 72px;
+  }
+
+  .cert-image-logo-ai {
+    width: 82px;
+  }
+}
+
 .certification-logo-row {
   display: flex;
   align-items: center;
