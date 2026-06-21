@@ -1,173 +1,96 @@
-const roles = [
-  "Logistics Data Specialist",
-  "Marketing Analyst",
-  "Operations Analyst",
-  "Reporting Specialist",
-  "Dashboard Builder"
-];
+const video = document.querySelector("#story-video");
+const hitbox = document.querySelector(".frame-hitbox");
+const nextButton = document.querySelector(".next-button");
+const totalScenes = 5;
+let currentScene = 1;
 
-const typedRole = document.querySelector("#typed-role");
-const year = document.querySelector("#year");
-const themeToggle = document.querySelector(".theme-toggle");
-const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector(".site-nav");
-const socialMenu = document.querySelector(".social-menu");
-const socialMenuButton = document.querySelector(".social-menu button");
-const miscVideoToggles = document.querySelectorAll(".misc-video-toggle");
+const scenePath = (number) => `assets/video-scenes-fixed/scene-${String(number).padStart(3, "0")}.mp4`;
 
-let roleIndex = 0;
-let charIndex = 0;
-let deleting = false;
-
-year.textContent = new Date().getFullYear();
-
-function typeRole() {
-  const current = roles[roleIndex];
-  typedRole.textContent = current.slice(0, charIndex);
-
-  if (!deleting && charIndex < current.length) {
-    charIndex += 1;
-    setTimeout(typeRole, 80);
+async function playCurrentScene() {
+  if (!video) {
     return;
   }
 
-  if (!deleting && charIndex === current.length) {
-    deleting = true;
-    setTimeout(typeRole, 1300);
-    return;
+  video.currentTime = 0;
+  try {
+    await video.play();
+  } catch {
+    // Browser may wait for the next user tap; the click handler will retry.
   }
-
-  if (deleting && charIndex > 0) {
-    charIndex -= 1;
-    setTimeout(typeRole, 42);
-    return;
-  }
-
-  deleting = false;
-  roleIndex = (roleIndex + 1) % roles.length;
-  setTimeout(typeRole, 250);
 }
 
-const savedTheme = localStorage.getItem("shreyas-portfolio-theme");
-if (savedTheme === "dark") {
-  document.body.classList.add("dark");
+function showScene(number) {
+  currentScene = ((number - 1 + totalScenes) % totalScenes) + 1;
+  video.src = scenePath(currentScene);
+  video.load();
+  playCurrentScene();
 }
 
-themeToggle.addEventListener("click", () => {
-  const isDark = document.body.classList.toggle("dark");
-  localStorage.setItem("shreyas-portfolio-theme", isDark ? "dark" : "light");
-});
+function nextScene() {
+  showScene(currentScene + 1);
+}
 
-navToggle.addEventListener("click", () => {
-  const isOpen = siteNav.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
+function previousScene() {
+  showScene(currentScene - 1);
+}
 
-siteNav.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
-    siteNav.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
-  }
-});
-
-socialMenuButton?.addEventListener("click", (event) => {
+nextButton?.addEventListener("click", (event) => {
   event.stopPropagation();
-  socialMenu?.classList.toggle("open");
+  nextScene();
 });
 
-socialMenu?.addEventListener("click", (event) => {
-  if (event.target.matches("a")) {
-    socialMenu.classList.remove("open");
-  }
-});
-
-document.addEventListener("click", (event) => {
-  if (socialMenu && !socialMenu.contains(event.target)) {
-    socialMenu.classList.remove("open");
-  }
+video?.addEventListener("ended", () => {
+  video.currentTime = Math.max(0, video.duration - 0.08);
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    socialMenu?.classList.remove("open");
+  if (event.key === "ArrowRight" || event.key === " " || event.key === "Enter") {
+    nextScene();
+  }
+
+  if (event.key === "ArrowLeft" || event.key === "Backspace") {
+    previousScene();
   }
 });
 
-miscVideoToggles.forEach((button) => {
-  const frame = button.closest(".misc-video-frame");
-  const video = frame?.querySelector(".misc-audio-video");
-  const canvas = frame?.querySelector(".misc-video-canvas");
-  const context = canvas?.getContext("2d");
+playCurrentScene();
 
-  function drawVideoFrame() {
-    if (!(video instanceof HTMLVideoElement) || !(canvas instanceof HTMLCanvasElement) || !context) {
+const typedRole = document.querySelector("#typed-role");
+const roles = [
+  "Digital Marketing Specialist",
+  "Social Media Analyst",
+  "Data Analyst",
+  "Operations Analyst",
+];
+
+let roleIndex = 0;
+let characterIndex = roles[0].length;
+let deletingRole = true;
+
+function updateTypedRole() {
+  if (!typedRole) {
+    return;
+  }
+
+  const currentRole = roles[roleIndex];
+  typedRole.textContent = currentRole.slice(0, characterIndex);
+
+  if (deletingRole) {
+    characterIndex -= 1;
+    if (characterIndex <= 0) {
+      deletingRole = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+    }
+  } else {
+    characterIndex += 1;
+    if (characterIndex >= roles[roleIndex].length) {
+      deletingRole = true;
+      setTimeout(updateTypedRole, 1200);
       return;
-    }
-
-    const width = frame.clientWidth;
-    const height = frame.clientHeight;
-    const pixelRatio = window.devicePixelRatio || 1;
-
-    if (canvas.width !== Math.round(width * pixelRatio) || canvas.height !== Math.round(height * pixelRatio)) {
-      canvas.width = Math.round(width * pixelRatio);
-      canvas.height = Math.round(height * pixelRatio);
-    }
-
-    context.save();
-    context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
-    context.clearRect(0, 0, width, height);
-    context.translate(width / 2, height / 2);
-    context.rotate(-Math.PI / 2);
-    try {
-      context.drawImage(video, -height / 2, -width / 2, height, width);
-    } catch {
-      context.restore();
-      return;
-    }
-    context.restore();
-
-    if (!video.paused && !video.ended) {
-      requestAnimationFrame(drawVideoFrame);
     }
   }
 
-  video?.addEventListener("loadeddata", drawVideoFrame);
-  video?.addEventListener("seeked", drawVideoFrame);
-  video?.load();
+  setTimeout(updateTypedRole, deletingRole ? 45 : 80);
+}
 
-  button.addEventListener("click", async () => {
-    if (!(video instanceof HTMLVideoElement)) {
-      return;
-    }
-
-    if (video.paused) {
-      video.muted = false;
-      try {
-        await video.play();
-        drawVideoFrame();
-        button.textContent = "Pause";
-        button.setAttribute("aria-label", "Pause video");
-      } catch {
-        button.textContent = "Play";
-        button.setAttribute("aria-label", "Play video with audio");
-      }
-    } else {
-      video.pause();
-      button.textContent = "Play";
-      button.setAttribute("aria-label", "Play video with audio");
-    }
-  });
-
-  video?.addEventListener("pause", () => {
-    button.textContent = "Play";
-    button.setAttribute("aria-label", "Play video with audio");
-  });
-
-  video?.addEventListener("play", () => {
-    drawVideoFrame();
-    button.textContent = "Pause";
-    button.setAttribute("aria-label", "Pause video");
-  });
-});
-
-typeRole();
+setTimeout(updateTypedRole, 900);
