@@ -83,7 +83,7 @@ function updateTypedRole() {
     }
   } else {
     characterIndex += 1;
-    if (characterIndex >= roles[roleIndex].length) {
+    if (characterIndex > roles[roleIndex].length) {
       deletingRole = true;
       setTimeout(updateTypedRole, 1200);
       return;
