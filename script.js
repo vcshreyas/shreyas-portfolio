@@ -94,3 +94,68 @@ function updateTypedRole() {
 }
 
 setTimeout(updateTypedRole, 900);
+
+document.querySelectorAll(".misc-video-frame").forEach((frame) => {
+  const miscVideo = frame.querySelector(".misc-audio-video");
+  const canvas = frame.querySelector(".misc-video-canvas");
+  const button = frame.querySelector(".misc-video-toggle");
+
+  if (!miscVideo || !canvas || !button) {
+    return;
+  }
+
+  const context = canvas.getContext("2d");
+
+  function sizeCanvas() {
+    const bounds = frame.getBoundingClientRect();
+    const scale = window.devicePixelRatio || 1;
+    canvas.width = Math.max(1, Math.round(bounds.width * scale));
+    canvas.height = Math.max(1, Math.round(bounds.height * scale));
+    context.setTransform(scale, 0, 0, scale, 0, 0);
+  }
+
+  function drawFrame() {
+    sizeCanvas();
+    const width = canvas.width / (window.devicePixelRatio || 1);
+    const height = canvas.height / (window.devicePixelRatio || 1);
+
+    context.clearRect(0, 0, width, height);
+
+    if (miscVideo.videoWidth && miscVideo.videoHeight) {
+      const rotatedWidth = miscVideo.videoHeight;
+      const rotatedHeight = miscVideo.videoWidth;
+      const fit = Math.max(width / rotatedWidth, height / rotatedHeight);
+      const drawWidth = miscVideo.videoWidth * fit;
+      const drawHeight = miscVideo.videoHeight * fit;
+
+      context.save();
+      context.translate(width / 2, height / 2);
+      context.rotate(Math.PI / 2);
+      context.drawImage(miscVideo, -drawWidth / 2, -drawHeight / 2, drawWidth, drawHeight);
+      context.restore();
+    }
+
+    if (!miscVideo.paused && !miscVideo.ended) {
+      requestAnimationFrame(drawFrame);
+    }
+  }
+
+  miscVideo.addEventListener("loadeddata", drawFrame);
+  miscVideo.addEventListener("play", drawFrame);
+  miscVideo.addEventListener("pause", drawFrame);
+  window.addEventListener("resize", drawFrame);
+
+  button.addEventListener("click", async () => {
+    if (miscVideo.paused) {
+      try {
+        await miscVideo.play();
+        button.textContent = "Pause";
+      } catch {
+        button.textContent = "Play";
+      }
+    } else {
+      miscVideo.pause();
+      button.textContent = "Play";
+    }
+  });
+});
