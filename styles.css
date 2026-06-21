@@ -133,6 +133,18 @@
   }
 }
 
+/* Final project card tightening */
+#projects .project-grid {
+  align-items: start;
+}
+
+#projects .project-card {
+  align-self: start;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 20px;
+}
+
 /* Exact Canva certification logo strip with individual clickable areas */
 .cert-canva-strip-row {
   position: relative;
@@ -4025,3 +4037,16 @@ footer {
     margin-top: 0;
   }
 }
+
+/* Final project card tightening */
+#projects .project-grid {
+  align-items: start;
+}
+
+#projects .project-card {
+  align-self: start;
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 20px;
+}
+
