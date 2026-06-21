@@ -130,7 +130,7 @@ document.querySelectorAll(".misc-video-frame").forEach((frame) => {
 
       context.save();
       context.translate(width / 2, height / 2);
-      context.rotate(Math.PI / 2);
+      context.rotate(-Math.PI / 2);
       context.drawImage(miscVideo, -drawWidth / 2, -drawHeight / 2, drawWidth, drawHeight);
       context.restore();
     }
