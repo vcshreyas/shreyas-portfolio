@@ -145,64 +145,6 @@
   padding-bottom: 20px;
 }
 
-/* Canva page 4 placement */
-.page-four .stars-layout {
-  grid-template-columns: 445px 580px 445px;
-  gap: 36px;
-  align-items: start;
-  padding-top: 78px;
-}
-
-.page-four .stars-left .canva-title {
-  margin: 0 0 72px;
-  font-size: 2.45rem;
-  text-align: center;
-}
-
-.page-four .stars-left img,
-.page-four .stars-right img {
-  width: 445px;
-  height: 592px;
-  object-fit: cover;
-  display: block;
-}
-
-.page-four .stars-left img {
-  object-position: center center;
-}
-
-.page-four .stars-right {
-  padding-top: 24px;
-}
-
-.page-four .stars-right img {
-  object-position: center center;
-}
-
-.page-four .stars-center {
-  gap: 0;
-}
-
-.page-four .stars-center video {
-  width: 580px;
-  height: 326px;
-  aspect-ratio: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.page-four .device-note {
-  margin: 28px 0 30px;
-  font-size: 1.35rem;
-  line-height: 1.34;
-  text-align: center;
-}
-
-.page-four .stars-right .canva-caption {
-  margin-top: 72px;
-  font-size: 2.55rem;
-  text-align: center;
-}
 
 /* Exact Canva certification logo strip with individual clickable areas */
 .cert-canva-strip-row {
