@@ -1035,7 +1035,7 @@ h1 {
 
 .car-expo-video {
   position: absolute;
-  top: calc(48px + min(100vw, 1366px) * 0.072);
+  top: calc(48px + min(100vw, 1366px) * 0.037);
   left: calc(50% + min(100vw, 1366px) * 0.121);
   width: calc(min(100vw, 1366px) * 0.276);
   height: calc(min(100vw, 1366px) * 0.493);
