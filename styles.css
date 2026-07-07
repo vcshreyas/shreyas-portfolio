@@ -1021,6 +1021,7 @@ h1 {
 }
 
 .car-expo-page {
+  position: relative;
   min-height: auto;
   padding: 48px 24px;
 }
@@ -1030,6 +1031,16 @@ h1 {
   width: min(100%, 1366px);
   height: auto;
   margin: 0 auto;
+}
+
+.car-expo-video {
+  position: absolute;
+  top: calc(48px + min(100vw, 1366px) * 0.072);
+  left: calc(50% + min(100vw, 1366px) * 0.121);
+  width: calc(min(100vw, 1366px) * 0.276);
+  height: calc(min(100vw, 1366px) * 0.493);
+  object-fit: cover;
+  background: #000000;
 }
 
 .canva-title {
