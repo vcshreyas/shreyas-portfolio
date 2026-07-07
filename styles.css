@@ -1020,6 +1020,18 @@ h1 {
   border-top: 1px solid #eeeeee;
 }
 
+.car-expo-page {
+  min-height: auto;
+  padding: 48px 24px;
+}
+
+.car-expo-render {
+  display: block;
+  width: min(100%, 1366px);
+  height: auto;
+  margin: 0 auto;
+}
+
 .canva-title {
   margin: 0 0 26px;
   color: #000000;
