@@ -852,6 +852,26 @@ h1 {
   min-height: 260px;
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin-top: 18px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(20, 118, 230, 0.18);
+}
+
+.project-link:hover {
+  background: var(--accent-2);
+  color: #ffffff;
+}
+
 .card-top {
   display: flex;
   justify-content: space-between;
