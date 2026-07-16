@@ -145,6 +145,22 @@
   padding-bottom: 20px;
 }
 
+#projects .project-stack {
+  display: grid;
+  gap: 18px;
+  align-self: start;
+}
+
+#projects .project-stack .project-card {
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  #projects .project-stack {
+    display: contents;
+  }
+}
+
 
 /* Exact Canva certification logo strip with individual clickable areas */
 .cert-canva-strip-row {
