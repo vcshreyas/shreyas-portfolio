@@ -60,7 +60,6 @@ const roles = [
   "Digital Marketing Specialist",
   "Social Media Analyst",
   "Data Analyst",
-  "Operations Analyst",
 ];
 
 let roleIndex = 0;
