@@ -58,7 +58,6 @@ playCurrentScene();
 const typedRole = document.querySelector("#typed-role");
 const roles = [
   "Digital Marketing Specialist",
-  "Social Media Analyst",
   "Data Analyst",
 ];
 
