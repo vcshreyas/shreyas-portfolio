@@ -193,6 +193,43 @@
   }
 }
 
+/* Content work tabs */
+.content-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 28px;
+}
+
+.content-tab {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 11px 18px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(21, 34, 56, 0.06);
+}
+
+.content-tab:hover,
+.content-tab.is-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.content-feature[hidden] {
+  display: none !important;
+}
+
+.content-showcase {
+  grid-template-columns: 1fr;
+}
+
 
 /* Exact Canva certification logo strip with individual clickable areas */
 .cert-canva-strip-row {
