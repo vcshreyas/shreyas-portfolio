@@ -196,3 +196,46 @@ contentTabs.forEach((tab) => {
     });
   });
 });
+
+const projectModal = document.querySelector("#project-modal");
+const projectModalTitle = document.querySelector("#project-modal-title");
+const projectModalDescription = document.querySelector("#project-modal-description");
+const projectDetailButtons = document.querySelectorAll(".project-detail-button");
+let lastProjectTrigger = null;
+
+function closeProjectModal() {
+  if (!projectModal) {
+    return;
+  }
+
+  projectModal.classList.remove("is-open");
+  projectModal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+  lastProjectTrigger?.focus();
+}
+
+projectDetailButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (!projectModal || !projectModalTitle || !projectModalDescription) {
+      return;
+    }
+
+    lastProjectTrigger = button;
+    projectModalTitle.textContent = button.dataset.projectTitle || "";
+    projectModalDescription.textContent = button.dataset.projectDescription || "";
+    projectModal.classList.add("is-open");
+    projectModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    projectModal.querySelector(".project-modal-close")?.focus();
+  });
+});
+
+document.querySelectorAll("[data-project-modal-close]").forEach((button) => {
+  button.addEventListener("click", closeProjectModal);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && projectModal?.classList.contains("is-open")) {
+    closeProjectModal();
+  }
+});
