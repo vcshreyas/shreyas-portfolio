@@ -157,3 +157,21 @@ document.querySelectorAll(".misc-video-frame").forEach((frame) => {
     }
   });
 });
+
+const miscCarousel = document.querySelector(".misc-carousel-track");
+const miscPrev = document.querySelector(".misc-carousel-prev");
+const miscNext = document.querySelector(".misc-carousel-next");
+
+function scrollMiscCarousel(direction) {
+  if (!miscCarousel) {
+    return;
+  }
+
+  miscCarousel.scrollBy({
+    left: miscCarousel.clientWidth * direction,
+    behavior: "smooth",
+  });
+}
+
+miscPrev?.addEventListener("click", () => scrollMiscCarousel(-1));
+miscNext?.addEventListener("click", () => scrollMiscCarousel(1));
