@@ -1070,9 +1070,66 @@ h1 {
 }
 
 .canva-pages {
+  position: relative;
   background: #ffffff;
   color: #000000;
   font-family: "Times New Roman", Times, serif;
+  overflow: hidden;
+}
+
+.misc-carousel-track {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.misc-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.misc-carousel-track .canva-page {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: none;
+  scroll-snap-align: start;
+}
+
+.misc-carousel-track .canva-page + .canva-page {
+  border-top: 0;
+}
+
+.misc-carousel-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 12;
+  width: 54px;
+  height: 54px;
+  border: 1px solid rgba(7, 48, 124, 0.18);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  color: #07307c;
+  box-shadow: 0 16px 32px rgba(15, 35, 70, 0.16);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.misc-carousel-btn:hover {
+  background: #07307c;
+  color: #ffffff;
+}
+
+.misc-carousel-prev {
+  left: 20px;
+}
+
+.misc-carousel-next {
+  right: 20px;
 }
 
 .canva-page {
