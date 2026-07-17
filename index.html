@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=85">
+  <link rel="stylesheet" href="styles.css?v=86">
 </head>
 <body>
   <header class="site-header">
@@ -200,9 +200,14 @@
       <div class="section-title">
         <h2>Content Creation & Marketing Work</h2>
       </div>
+      <div class="content-tabs" role="tablist" aria-label="Content work categories">
+        <button class="content-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="content-panel-ptw" id="content-tab-ptw" data-content-tab="ptw">PTW</button>
+        <button class="content-tab" type="button" role="tab" aria-selected="false" aria-controls="content-panel-porter" id="content-tab-porter" data-content-tab="porter">Porter</button>
+        <button class="content-tab" type="button" role="tab" aria-selected="false" aria-controls="content-panel-etam" id="content-tab-etam" data-content-tab="etam">East Texas A&amp;M University</button>
+      </div>
       <div class="content-showcase">
-        <article class="content-feature">
-          <span>PTW</span>
+        <article class="content-feature is-active" id="content-panel-ptw" role="tabpanel" aria-labelledby="content-tab-ptw" data-content-panel="ptw">
+          <span>PTW - Marketing Support Coordinator</span>
           <div class="work-images ptw-gallery" aria-label="PTW content work samples">
             <img src="https://svcportfolio.my.canva.site/_assets/media/d506c91d24dee665808305a4b1e30de2.jpg" alt="PTW content work sample 1" loading="lazy">
             <img src="https://svcportfolio.my.canva.site/_assets/media/dc602615b567be9de0ba7a29a03bbce3.jpg" alt="PTW content work sample 2" loading="lazy">
@@ -222,8 +227,8 @@
           </div>
           <p class="work-year">2021 - 2022</p>
         </article>
-        <article class="content-feature">
-          <span>Porter</span>
+        <article class="content-feature" id="content-panel-porter" role="tabpanel" aria-labelledby="content-tab-porter" data-content-panel="porter" hidden>
+          <span>Porter - Marketing &amp; Brand Analyst</span>
           <div class="work-images porter-gallery" aria-label="Porter marketing work samples">
             <img src="https://svcportfolio.my.canva.site/_assets/media/20fad94221db163c82922138c1c2bd26.jpg" alt="Porter delivery creative" loading="lazy">
             <iframe src="https://canva-embed.com/api/iframe?app=1&url=https%3A%2F%2Fwww.instagram.com%2Fp%2FCvFOn4xhQSN%2F%3Figsh%3DNjFhOGMzYTE3ZQ%3D%3D&key=462812a26b593f2dbfbfcbb14f6d699a" title="Porter Instagram creative" loading="lazy" allowfullscreen></iframe>
@@ -231,8 +236,8 @@
           </div>
           <p class="work-year">2022 - 2023</p>
         </article>
-        <article class="content-feature">
-          <span>Graduate Assistant - Marketing & Communication</span>
+        <article class="content-feature" id="content-panel-etam" role="tabpanel" aria-labelledby="content-tab-etam" data-content-panel="etam" hidden>
+          <span>East Texas A&amp;M University - Graduate Assistant, Marketing &amp; Communication</span>
           <div class="work-images grad-gallery" aria-label="Graduate Assistant marketing work samples">
             <img src="https://svcportfolio.my.canva.site/_assets/media/8eb848bdd0606237e6c472d87a01d387.jpg" alt="Graduate Assistant campaign creative" loading="lazy">
             <video controls preload="metadata" poster="https://svcportfolio.my.canva.site/_assets/video/ec47328df814850b5d8ba9e780ed60bd.jpg" aria-label="Graduate Assistant video creative">
@@ -403,6 +408,6 @@
 <footer>
     <p>© <span id="year"></span> Shreyas C Vaddarahalli. All rights reserved.</p>
   </footer>
-<script src="script.js?v=47"></script>
+<script src="script.js?v=48"></script>
 </body>
 </html>
