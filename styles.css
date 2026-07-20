@@ -1166,6 +1166,22 @@ h1 {
   box-shadow: none;
 }
 
+.mahindra-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  background: transparent;
+  gap: clamp(34px, 6vw, 58px);
+  padding: clamp(12px, 2vw, 22px);
+}
+
+.mahindra-gallery iframe {
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+  background: #ffffff;
+}
+
 .grad-gallery {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
