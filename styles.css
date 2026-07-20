@@ -1184,6 +1184,14 @@ h1 {
   background: #ffffff;
 }
 
+#content-panel-mahindra {
+  background: #ffffff;
+}
+
+#content-panel-mahindra span {
+  color: #8fb2ed;
+}
+
 .grad-gallery {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
