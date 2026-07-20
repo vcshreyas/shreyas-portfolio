@@ -145,6 +145,20 @@
   padding-bottom: 20px;
 }
 
+/* Final Mahindra panel color fix */
+#content-panel-mahindra,
+#content-panel-mahindra .mahindra-gallery,
+#content-panel-mahindra .work-images {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+#content-panel-mahindra iframe {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
 #projects .project-stack {
   display: grid;
   gap: 18px;
