@@ -5754,19 +5754,19 @@ main > .section-panel + .section-panel {
 
 /* Final hero watermark overlap fix */
 #home.hero {
-  padding-top: clamp(58px, 6vw, 88px) !important;
+  padding-top: clamp(78px, 7.5vw, 116px) !important;
 }
 
 #home.hero::before {
-  top: clamp(-18px, -0.8vw, -8px) !important;
-  font-size: clamp(4rem, 10vw, 10.4rem) !important;
-  line-height: 0.68 !important;
-  color: rgba(16, 33, 61, 0.065) !important;
+  top: clamp(18px, 2vw, 32px) !important;
+  font-size: clamp(3.8rem, 9.2vw, 9.8rem) !important;
+  line-height: 0.8 !important;
+  color: rgba(16, 33, 61, 0.055) !important;
 }
 
 #home .hero-visual,
 #home .hero-copy {
-  margin-top: clamp(24px, 3vw, 42px) !important;
+  margin-top: clamp(44px, 4.5vw, 72px) !important;
 }
 
 @media (max-width: 920px) {
