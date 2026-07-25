@@ -5547,3 +5547,13 @@ footer {
   background: rgba(0, 105, 224, 0.08);
   color: var(--accent);
 }
+
+/* Final desktop-style rendering on mobile */
+html,
+body {
+  min-width: 1440px;
+}
+
+body {
+  overflow-x: auto;
+}
