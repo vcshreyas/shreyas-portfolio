@@ -145,6 +145,248 @@
   padding-bottom: 20px;
 }
 
+/* Final premium microinteractions */
+.experience-logo,
+.school-logo,
+.brand-logo,
+.creative-logo,
+.cert-image-logo,
+.cert-logo,
+.cert-hotspot,
+.content-tab {
+  will-change: transform, box-shadow, border-color, filter;
+}
+
+.experience-logo,
+.school-logo,
+.brand-logo,
+.creative-logo,
+.cert-image-logo,
+.cert-logo {
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease,
+    filter 240ms ease !important;
+}
+
+.experience-logo:hover,
+.school-logo:hover,
+.brand-logo:hover,
+.creative-logo:hover,
+.cert-image-logo:hover,
+.cert-image-logo:focus-visible,
+.cert-logo:hover,
+.cert-logo:focus-visible {
+  transform: translateY(-4px) scale(1.025) !important;
+  border-color: rgba(0, 105, 224, 0.28) !important;
+  box-shadow:
+    0 18px 34px rgba(15, 31, 56, 0.14),
+    0 0 0 5px rgba(0, 105, 224, 0.055) !important;
+  filter: saturate(1.06) contrast(1.02);
+}
+
+.primary-logo-row .brand-logo:hover,
+.creative-logo-row .creative-logo:hover {
+  box-shadow:
+    0 20px 38px rgba(15, 31, 56, 0.12),
+    0 0 28px rgba(0, 105, 224, 0.16) !important;
+}
+
+.cert-image-logo:hover,
+.cert-image-logo:focus-visible {
+  background: #ffffff !important;
+  outline: none;
+}
+
+.cert-hotspot {
+  border-radius: 18px;
+  transition: background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease !important;
+}
+
+.cert-hotspot:hover,
+.cert-hotspot:focus-visible {
+  background-color: rgba(0, 105, 224, 0.055) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 105, 224, 0.22), 0 12px 26px rgba(15, 31, 56, 0.1) !important;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.content-tab {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease !important;
+}
+
+.content-tab::after {
+  content: "";
+  position: absolute;
+  inset: -60% -35%;
+  background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.28), transparent 65%);
+  transform: translateX(-90%);
+  transition: transform 420ms ease;
+  pointer-events: none;
+}
+
+.content-tab:hover,
+.content-tab:focus-visible {
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 14px 30px rgba(0, 105, 224, 0.14),
+    0 0 0 4px rgba(0, 105, 224, 0.055) !important;
+  outline: none;
+}
+
+.content-tab:hover::after,
+.content-tab:focus-visible::after,
+.content-tab.is-active::after {
+  transform: translateX(90%);
+}
+
+.content-tab.is-active {
+  box-shadow:
+    0 16px 34px rgba(0, 105, 224, 0.18),
+    0 0 0 4px rgba(0, 105, 224, 0.075) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-logo:hover,
+  .school-logo:hover,
+  .brand-logo:hover,
+  .creative-logo:hover,
+  .cert-image-logo:hover,
+  .cert-logo:hover,
+  .content-tab:hover {
+    transform: none !important;
+  }
+}
+
+/* Premium microinteractions */
+.experience-logo,
+.school-logo,
+.brand-logo,
+.creative-logo,
+.cert-image-logo,
+.cert-logo,
+.cert-hotspot,
+.content-tab {
+  will-change: transform, box-shadow, border-color, filter;
+}
+
+.experience-logo,
+.school-logo,
+.brand-logo,
+.creative-logo,
+.cert-image-logo,
+.cert-logo {
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease,
+    filter 240ms ease !important;
+}
+
+.experience-logo:hover,
+.school-logo:hover,
+.brand-logo:hover,
+.creative-logo:hover,
+.cert-image-logo:hover,
+.cert-image-logo:focus-visible,
+.cert-logo:hover,
+.cert-logo:focus-visible {
+  transform: translateY(-4px) scale(1.025) !important;
+  border-color: rgba(0, 105, 224, 0.28) !important;
+  box-shadow:
+    0 18px 34px rgba(15, 31, 56, 0.14),
+    0 0 0 5px rgba(0, 105, 224, 0.055) !important;
+  filter: saturate(1.06) contrast(1.02);
+}
+
+.primary-logo-row .brand-logo:hover,
+.creative-logo-row .creative-logo:hover {
+  box-shadow:
+    0 20px 38px rgba(15, 31, 56, 0.12),
+    0 0 28px rgba(0, 105, 224, 0.16) !important;
+}
+
+.cert-image-logo:hover,
+.cert-image-logo:focus-visible {
+  background: #ffffff !important;
+  outline: none;
+}
+
+.cert-hotspot {
+  border-radius: 18px;
+  transition: background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease !important;
+}
+
+.cert-hotspot:hover,
+.cert-hotspot:focus-visible {
+  background-color: rgba(0, 105, 224, 0.055) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 105, 224, 0.22), 0 12px 26px rgba(15, 31, 56, 0.1) !important;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.content-tab {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease !important;
+}
+
+.content-tab::after {
+  content: "";
+  position: absolute;
+  inset: -60% -35%;
+  background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.28), transparent 65%);
+  transform: translateX(-90%);
+  transition: transform 420ms ease;
+  pointer-events: none;
+}
+
+.content-tab:hover,
+.content-tab:focus-visible {
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 14px 30px rgba(0, 105, 224, 0.14),
+    0 0 0 4px rgba(0, 105, 224, 0.055) !important;
+  outline: none;
+}
+
+.content-tab:hover::after,
+.content-tab:focus-visible::after,
+.content-tab.is-active::after {
+  transform: translateX(90%);
+}
+
+.content-tab.is-active {
+  box-shadow:
+    0 16px 34px rgba(0, 105, 224, 0.18),
+    0 0 0 4px rgba(0, 105, 224, 0.075) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-logo:hover,
+  .school-logo:hover,
+  .brand-logo:hover,
+  .creative-logo:hover,
+  .cert-image-logo:hover,
+  .cert-logo:hover,
+  .content-tab:hover {
+    transform: none !important;
+  }
+}
+
 /* Final premium experience override */
 #experience {
   background:
@@ -4815,3 +5057,124 @@ footer {
   padding-bottom: 20px;
 }
 
+
+/* Final premium microinteractions */
+.experience-logo,
+.school-logo,
+.brand-logo,
+.creative-logo,
+.cert-image-logo,
+.cert-logo,
+.cert-hotspot,
+.content-tab {
+  will-change: transform, box-shadow, border-color, filter;
+}
+
+.experience-logo,
+.school-logo,
+.brand-logo,
+.creative-logo,
+.cert-image-logo,
+.cert-logo {
+  transition:
+    transform 240ms ease,
+    box-shadow 240ms ease,
+    border-color 240ms ease,
+    filter 240ms ease !important;
+}
+
+.experience-logo:hover,
+.school-logo:hover,
+.brand-logo:hover,
+.creative-logo:hover,
+.cert-image-logo:hover,
+.cert-image-logo:focus-visible,
+.cert-logo:hover,
+.cert-logo:focus-visible {
+  transform: translateY(-4px) scale(1.025) !important;
+  border-color: rgba(0, 105, 224, 0.28) !important;
+  box-shadow:
+    0 18px 34px rgba(15, 31, 56, 0.14),
+    0 0 0 5px rgba(0, 105, 224, 0.055) !important;
+  filter: saturate(1.06) contrast(1.02);
+}
+
+.primary-logo-row .brand-logo:hover,
+.creative-logo-row .creative-logo:hover {
+  box-shadow:
+    0 20px 38px rgba(15, 31, 56, 0.12),
+    0 0 28px rgba(0, 105, 224, 0.16) !important;
+}
+
+.cert-image-logo:hover,
+.cert-image-logo:focus-visible {
+  background: #ffffff !important;
+  outline: none;
+}
+
+.cert-hotspot {
+  border-radius: 18px;
+  transition: background-color 220ms ease, box-shadow 220ms ease, transform 220ms ease !important;
+}
+
+.cert-hotspot:hover,
+.cert-hotspot:focus-visible {
+  background-color: rgba(0, 105, 224, 0.055) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 105, 224, 0.22), 0 12px 26px rgba(15, 31, 56, 0.1) !important;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.content-tab {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    color 220ms ease !important;
+}
+
+.content-tab::after {
+  content: "";
+  position: absolute;
+  inset: -60% -35%;
+  background: linear-gradient(120deg, transparent 35%, rgba(255, 255, 255, 0.28), transparent 65%);
+  transform: translateX(-90%);
+  transition: transform 420ms ease;
+  pointer-events: none;
+}
+
+.content-tab:hover,
+.content-tab:focus-visible {
+  transform: translateY(-3px) !important;
+  box-shadow:
+    0 14px 30px rgba(0, 105, 224, 0.14),
+    0 0 0 4px rgba(0, 105, 224, 0.055) !important;
+  outline: none;
+}
+
+.content-tab:hover::after,
+.content-tab:focus-visible::after,
+.content-tab.is-active::after {
+  transform: translateX(90%);
+}
+
+.content-tab.is-active {
+  box-shadow:
+    0 16px 34px rgba(0, 105, 224, 0.18),
+    0 0 0 4px rgba(0, 105, 224, 0.075) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-logo:hover,
+  .school-logo:hover,
+  .brand-logo:hover,
+  .creative-logo:hover,
+  .cert-image-logo:hover,
+  .cert-logo:hover,
+  .content-tab:hover {
+    transform: none !important;
+  }
+}
