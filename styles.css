@@ -5557,3 +5557,13 @@ body {
 body {
   overflow-x: auto;
 }
+
+/* Final responsive mobile view restore */
+html,
+body {
+  min-width: 0 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
