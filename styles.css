@@ -159,6 +159,139 @@
   background-color: #ffffff !important;
 }
 
+/* Portfolio motion polish */
+@keyframes fadeUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softScaleIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.section-panel.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 720ms ease, transform 720ms ease;
+}
+
+.section-panel.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#experience .timeline-item.reveal-on-scroll,
+.skills-showcase .primary-logo-row > *,
+.skills-showcase .creative-logo-row > *,
+.skills-showcase .skills-card,
+.skills-grid > div {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 650ms ease, transform 650ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+#experience .timeline-item.reveal-on-scroll.is-visible,
+.skills-showcase .primary-logo-row > *.is-visible,
+.skills-showcase .creative-logo-row > *.is-visible,
+.skills-showcase .skills-card.is-visible,
+.skills-grid > div.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#projects .project-card {
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+  will-change: transform;
+}
+
+#projects .project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 105, 224, 0.34);
+  box-shadow: 0 22px 42px rgba(15, 31, 56, 0.14);
+}
+
+.content-tab {
+  transition: background-color 220ms ease, border-color 220ms ease, color 220ms ease, transform 220ms ease, box-shadow 220ms ease;
+}
+
+.content-tab:hover {
+  transform: translateY(-2px);
+}
+
+.content-feature.is-active {
+  animation: softScaleIn 520ms ease both;
+}
+
+.work-images > *,
+.content-feature .work-year {
+  animation: fadeUpIn 560ms ease both;
+}
+
+.work-images > *:nth-child(2) {
+  animation-delay: 90ms;
+}
+
+.work-images > *:nth-child(3) {
+  animation-delay: 180ms;
+}
+
+.misc-carousel-track {
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.misc-carousel-track .canva-page {
+  scroll-snap-align: start;
+  transition: transform 360ms ease, opacity 360ms ease;
+}
+
+.misc-carousel-track .canva-page:hover {
+  transform: translateY(-4px);
+}
+
+.misc-carousel-btn {
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease, color 220ms ease;
+}
+
+.misc-carousel-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 31, 56, 0.14);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .section-panel.reveal-on-scroll,
+  #experience .timeline-item.reveal-on-scroll,
+  .skills-showcase .primary-logo-row > *,
+  .skills-showcase .creative-logo-row > *,
+  .skills-showcase .skills-card,
+  .skills-grid > div {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 #projects .project-stack {
   display: grid;
   gap: 18px;
