@@ -5491,3 +5491,59 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* Final contact Instagram icon menu */
+.contact-icon-menu {
+  position: relative;
+  display: inline-flex;
+}
+
+.contact-icon {
+  border: 0;
+  cursor: pointer;
+}
+
+.contact-icon-instagram {
+  background: radial-gradient(circle at 30% 110%, #feda75 0 22%, #fa7e1e 35%, #d62976 58%, #962fbf 78%, #4f5bd5 100%);
+}
+
+.contact-icon-menu-panel {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 12px);
+  transform: translate(-50%, 8px);
+  min-width: 154px;
+  padding: 8px;
+  border: 1px solid rgba(0, 105, 224, 0.16);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 18px 38px rgba(13, 28, 50, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+  z-index: 30;
+}
+
+.contact-icon-menu:hover .contact-icon-menu-panel,
+.contact-icon-menu:focus-within .contact-icon-menu-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.contact-icon-menu-panel a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.contact-icon-menu-panel a:hover {
+  background: rgba(0, 105, 224, 0.08);
+  color: var(--accent);
+}
