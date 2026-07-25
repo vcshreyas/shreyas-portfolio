@@ -6168,3 +6168,166 @@ footer {
     height: 158px !important;
   }
 }
+
+/* Final premium contact signal animation */
+#contact.contact {
+  grid-template-columns: minmax(320px, 0.95fr) minmax(260px, 0.6fr) minmax(320px, 0.95fr) !important;
+}
+
+.contact-signal {
+  position: relative;
+  width: min(300px, 64vw);
+  height: 112px;
+  justify-self: center;
+  align-self: center;
+  margin: 6px auto -6px;
+}
+
+.signal-track {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 58px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(11, 114, 231, 0.08), rgba(11, 114, 231, 0.42), rgba(24, 169, 153, 0.28), rgba(11, 114, 231, 0.08));
+  overflow: hidden;
+}
+
+.signal-track::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent);
+  transform: translateX(-100%);
+  animation: signalSweep 3.8s ease-in-out infinite;
+}
+
+.signal-runner {
+  position: absolute;
+  top: 51px;
+  left: 18px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #0b72e7;
+  box-shadow: 0 0 0 8px rgba(11, 114, 231, 0.1), 0 14px 26px rgba(11, 114, 231, 0.18);
+  animation: signalRunner 4.8s ease-in-out infinite;
+}
+
+.signal-node {
+  position: absolute;
+  top: 53px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #fff;
+  border: 3px solid #0b72e7;
+  box-shadow: 0 10px 22px rgba(11, 114, 231, 0.12);
+  animation: signalNodePulse 4.8s ease-in-out infinite;
+}
+
+.signal-node-one {
+  left: 16px;
+}
+
+.signal-node-two {
+  left: calc(50% - 6px);
+  border-color: #18a999;
+  animation-delay: -1.6s;
+}
+
+.signal-node-three {
+  right: 16px;
+  animation-delay: -3.2s;
+}
+
+.signal-label {
+  position: absolute;
+  top: 16px;
+  transform: translateX(-50%);
+  color: #10213d;
+  font: 700 0.82rem/1 Inter, system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  opacity: 0.72;
+}
+
+.signal-label-left {
+  left: 18px;
+  transform: none;
+}
+
+.signal-label-center {
+  left: 50%;
+}
+
+.signal-label-right {
+  right: 18px;
+  transform: none;
+}
+
+@keyframes signalRunner {
+  0%, 100% {
+    transform: translateX(0);
+    background: #0b72e7;
+  }
+  50% {
+    transform: translateX(calc(min(300px, 64vw) - 52px));
+    background: #18a999;
+  }
+}
+
+@keyframes signalSweep {
+  0%, 28% {
+    transform: translateX(-100%);
+  }
+  72%, 100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes signalNodePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.74;
+  }
+  50% {
+    transform: scale(1.24);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 980px) {
+  #contact.contact {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contact-signal {
+    height: 86px;
+    margin: -4px auto -10px;
+  }
+
+  .signal-label {
+    top: 8px;
+  }
+
+  .signal-track {
+    top: 46px;
+  }
+
+  .signal-runner {
+    top: 39px;
+  }
+
+  .signal-node {
+    top: 41px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-track::after,
+  .signal-runner,
+  .signal-node {
+    animation: none !important;
+  }
+}
