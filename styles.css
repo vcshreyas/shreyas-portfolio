@@ -5266,3 +5266,69 @@ footer {
     animation: none !important;
   }
 }
+
+/* Final individual Tools & Skills logo layout */
+.skills-canva-icons .tool-logo-row,
+.skills-canva-icons .creative-logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(18px, 2.8vw, 34px);
+  width: min(1120px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px clamp(18px, 3vw, 34px);
+  background: #fff;
+  border: 1px solid rgba(0, 105, 224, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(19, 39, 70, 0.07);
+}
+
+.skills-canva-icons .primary-logo-row {
+  min-height: 112px;
+  margin-bottom: 26px;
+}
+
+.skills-canva-icons .creative-logo-row {
+  width: fit-content;
+  max-width: 92vw;
+  margin-top: 34px;
+}
+
+.skills-canva-icons .brand-logo,
+.skills-canva-icons .creative-logo {
+  animation: none !important;
+  transition: transform 240ms ease, filter 240ms ease, box-shadow 240ms ease;
+  will-change: transform;
+}
+
+.skills-canva-icons .brand-logo:hover,
+.skills-canva-icons .creative-logo:hover {
+  transform: translateY(-6px) scale(1.035);
+  filter: drop-shadow(0 16px 22px rgba(0, 105, 224, 0.18));
+}
+
+.skills-canva-icons .tableau-logo {
+  letter-spacing: 5px;
+  color: #4d7190;
+  text-align: center;
+  min-width: 92px;
+}
+
+.skills-canva-icons .analytics-logo {
+  min-width: 210px;
+}
+
+@media (max-width: 700px) {
+  .skills-canva-icons .tool-logo-row,
+  .skills-canva-icons .creative-logo-row {
+    gap: 18px;
+    padding: 16px;
+  }
+
+  .skills-canva-icons .analytics-logo {
+    min-width: 170px;
+    font-size: 0.95rem;
+  }
+}
