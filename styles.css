@@ -6409,11 +6409,7 @@ footer {
 }
 
 .motion-orbit-line {
-  fill: none;
-  stroke: rgba(11, 114, 231, 0.18);
-  stroke-width: 2;
-  stroke-dasharray: 8 10;
-  animation: orbitDash 9s linear infinite;
+  display: none;
 }
 
 .motion-tile rect {
