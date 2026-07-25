@@ -5428,3 +5428,66 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* Final contact circular icon layout */
+.contact-card {
+  display: block !important;
+  padding: 32px !important;
+}
+
+.contact-line {
+  display: block;
+  margin: 0 0 14px;
+  color: var(--ink) !important;
+  font-size: clamp(1.12rem, 1.7vw, 1.45rem);
+  line-height: 1.25;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact-line:hover {
+  color: var(--accent) !important;
+}
+
+.contact-icon-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.contact-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 14px 28px rgba(13, 28, 50, 0.14);
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.contact-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.contact-icon:hover {
+  transform: translateY(-5px) scale(1.04);
+  box-shadow: 0 20px 34px rgba(0, 105, 224, 0.2);
+  filter: saturate(1.08);
+}
+
+.contact-icon-linkedin { background: #0a66c2; }
+.contact-icon-resume { background: #111827; }
+.contact-icon-email { background: #ef4444; }
+.contact-icon-phone { background: #16a34a; }
+
+@media (max-width: 640px) {
+  .contact-icon-row {
+    flex-wrap: wrap;
+  }
+}
