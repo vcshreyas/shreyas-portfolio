@@ -6428,6 +6428,10 @@ footer {
   stroke-linejoin: round;
 }
 
+.motion-tile-camera path {
+  display: none;
+}
+
 .motion-tile-social circle {
   fill: rgba(24, 169, 153, 0.16);
 }
