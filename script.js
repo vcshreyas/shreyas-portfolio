@@ -239,3 +239,32 @@ document.addEventListener("keydown", (event) => {
     closeProjectModal();
   }
 });
+
+const revealTargets = [
+  ...document.querySelectorAll(".section-panel"),
+  ...document.querySelectorAll("#experience .timeline-item"),
+  ...document.querySelectorAll(".skills-showcase .primary-logo-row > *, .skills-showcase .creative-logo-row > *, .skills-showcase .skills-card, .skills-grid > div"),
+];
+
+if ("IntersectionObserver" in window) {
+  revealTargets.forEach((target, index) => {
+    target.classList.add("reveal-on-scroll");
+    target.style.transitionDelay = `${Math.min(index % 8, 7) * 70}ms`;
+  });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: "0px 0px -8% 0px",
+  });
+
+  revealTargets.forEach((target) => revealObserver.observe(target));
+} else {
+  revealTargets.forEach((target) => target.classList.add("is-visible"));
+}
