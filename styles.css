@@ -5178,3 +5178,91 @@ footer {
     transform: none !important;
   }
 }
+
+/* Final Tools & Skills animation polish */
+@keyframes toolsStripFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 10px 18px rgba(15, 31, 56, 0.05));
+  }
+  50% {
+    transform: translateY(-7px) scale(1.006);
+    filter: drop-shadow(0 18px 26px rgba(0, 105, 224, 0.12));
+  }
+}
+
+@keyframes toolsCardGlow {
+  0%, 100% {
+    box-shadow: 0 14px 32px rgba(15, 31, 56, 0.06);
+  }
+  50% {
+    box-shadow: 0 20px 40px rgba(0, 105, 224, 0.11);
+  }
+}
+
+@keyframes toolsShineSweep {
+  from {
+    transform: translateX(-130%);
+  }
+  to {
+    transform: translateX(130%);
+  }
+}
+
+.skills-canva-icons .canva-icons-strip {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.skills-canva-icons .canva-icons-strip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(105deg, transparent 32%, rgba(255, 255, 255, 0.34), transparent 68%);
+  transform: translateX(-130%);
+  animation: toolsShineSweep 5.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.skills-canva-icons .canva-icons-strip img {
+  position: relative;
+  z-index: 1;
+  animation: toolsStripFloat 5.6s ease-in-out infinite;
+  transform-origin: center;
+  transition: transform 260ms ease, filter 260ms ease;
+}
+
+.skills-canva-icons .canva-icons-strip-bottom img {
+  animation-delay: 1.15s;
+}
+
+.skills-canva-icons .canva-icons-strip:hover img {
+  transform: translateY(-8px) scale(1.018);
+  filter: drop-shadow(0 22px 30px rgba(0, 105, 224, 0.16));
+}
+
+.skills-canva-icons .skills-grid > div {
+  animation: toolsCardGlow 6.4s ease-in-out infinite;
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease !important;
+}
+
+.skills-canva-icons .skills-grid > div:nth-child(2) { animation-delay: 0.45s; }
+.skills-canva-icons .skills-grid > div:nth-child(3) { animation-delay: 0.9s; }
+.skills-canva-icons .skills-grid > div:nth-child(4) { animation-delay: 1.35s; }
+
+.skills-canva-icons .skills-grid > div:hover {
+  transform: translateY(-8px) !important;
+  border-color: rgba(0, 105, 224, 0.28) !important;
+  box-shadow: 0 24px 48px rgba(0, 105, 224, 0.14) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-canva-icons .canva-icons-strip::after,
+  .skills-canva-icons .canva-icons-strip img,
+  .skills-canva-icons .skills-grid > div {
+    animation: none !important;
+  }
+}
