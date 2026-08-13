@@ -6875,7 +6875,8 @@ footer {
     display: grid !important;
     grid-template-columns: 1fr auto !important;
     align-items: center !important;
-    padding: 18px 18px !important;
+    padding: 5px 12px !important;
+    min-height: 46px !important;
   }
 
   .brand-spacer {
@@ -6887,16 +6888,23 @@ footer {
   .nav-toggle {
     grid-column: 2 !important;
     justify-self: end !important;
-    width: 56px !important;
-    height: 56px !important;
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
     position: relative !important;
     z-index: 30 !important;
+  }
+
+  .nav-toggle span {
+    width: 15px !important;
+    height: 2px !important;
   }
 
   .site-nav {
     grid-column: 1 / -1 !important;
     width: 100% !important;
-    margin-top: 12px !important;
+    margin-top: 8px !important;
     align-items: flex-end !important;
     text-align: right !important;
   }
