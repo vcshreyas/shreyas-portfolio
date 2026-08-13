@@ -6774,3 +6774,36 @@ footer {
     width: min(76vw, 286px) !important;
   }
 }
+
+/* Final mobile nav button placement */
+@media (max-width: 720px) {
+  .site-header {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    padding: 18px 18px !important;
+  }
+
+  .brand-spacer {
+    display: block !important;
+    width: 1px !important;
+    height: 1px !important;
+  }
+
+  .nav-toggle {
+    grid-column: 2 !important;
+    justify-self: end !important;
+    width: 56px !important;
+    height: 56px !important;
+    position: relative !important;
+    z-index: 30 !important;
+  }
+
+  .site-nav {
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    margin-top: 12px !important;
+    align-items: flex-end !important;
+    text-align: right !important;
+  }
+}
