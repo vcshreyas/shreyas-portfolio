@@ -1,8 +1,24 @@
 const video = document.querySelector("#story-video");
 const hitbox = document.querySelector(".frame-hitbox");
 const nextButton = document.querySelector(".next-button");
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector(".site-nav");
 const totalScenes = 5;
 let currentScene = 1;
+
+navToggle?.addEventListener("click", () => {
+  const isOpen = siteNav?.classList.toggle("open") ?? false;
+  navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+});
+
+siteNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    siteNav.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    navToggle?.setAttribute("aria-label", "Open navigation");
+  });
+});
 
 const scenePath = (number) => `assets/video-scenes-fixed/scene-${String(number).padStart(3, "0")}.mp4`;
 
