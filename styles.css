@@ -6647,6 +6647,13 @@ footer {
   }
 }
 
+/* Hide MiSC section on mobile only */
+@media (max-width: 760px) {
+  .canva-pages {
+    display: none !important;
+  }
+}
+
 /* Final mobile hero layout fix */
 @media (max-width: 760px) {
   #home.hero {
