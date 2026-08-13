@@ -6659,19 +6659,20 @@ footer {
   }
 
   #home.hero::before {
-    top: 8px !important;
+    top: 14px !important;
     left: 50% !important;
-    width: 140vw !important;
-    font-size: clamp(3.8rem, 20vw, 5.8rem) !important;
+    width: 112vw !important;
+    font-size: clamp(2.9rem, 14.5vw, 4.35rem) !important;
     line-height: 0.82 !important;
     transform: translateX(-50%) !important;
+    color: rgba(16, 33, 61, 0.04) !important;
     opacity: 1 !important;
   }
 
   #home .hero-copy {
     order: 1 !important;
     width: 100% !important;
-    margin: 34px 0 0 !important;
+    margin: 48px 0 0 !important;
     text-align: center !important;
   }
 
@@ -6762,7 +6763,7 @@ footer {
   }
 
   #home .hero-copy {
-    margin-top: 28px !important;
+    margin-top: 44px !important;
   }
 
   #home .hero-summary {
