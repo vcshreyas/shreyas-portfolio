@@ -6814,3 +6814,19 @@ footer {
     text-align: right !important;
   }
 }
+
+/* Final override: hide MiSC on phone/tablet mobile layouts */
+@media (max-width: 1024px) {
+  section.canva-pages,
+  .canva-pages,
+  .misc-carousel-track,
+  .misc-carousel-controls {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+}
