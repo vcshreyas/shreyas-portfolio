@@ -223,12 +223,18 @@ let lastProjectTrigger = null;
 const projectGalleries = {
   "sales-performance": [
     {
+      heading: "Dashboards:"
+    },
+    {
       src: "assets/projects/sales-performance/sales-overview.jpeg",
       alt: "Sales Overview Power BI dashboard"
     },
     {
       src: "assets/projects/sales-performance/customer-details.jpeg",
       alt: "Customer Details Power BI dashboard"
+    },
+    {
+      heading: "Data Module:"
     },
     {
       src: "assets/projects/sales-performance/data-model.jpeg",
@@ -265,6 +271,14 @@ projectDetailButtons.forEach((button) => {
       projectModalGallery.hidden = galleryItems.length === 0;
 
       galleryItems.forEach((item) => {
+        if (item.heading) {
+          const heading = document.createElement("h4");
+          heading.className = "project-gallery-heading";
+          heading.textContent = item.heading;
+          projectModalGallery.append(heading);
+          return;
+        }
+
         const figure = document.createElement("figure");
         figure.className = item.wide ? "project-gallery-item project-gallery-item-wide" : "project-gallery-item";
 
