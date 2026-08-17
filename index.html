@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=126">
+  <link rel="stylesheet" href="styles.css?v=127">
 </head>
 <body>
   <header class="site-header">
@@ -208,11 +208,10 @@
         </article>
         <article class="project-card">
           <div class="card-top"><span>02</span><span>MS Excel | SQL | Power BI</span></div>
-          <h3>Crime Statistics & Analysis Report</h3>
-          <p class="project-summary">Power BI crime analytics report exploring incident trends, demographics, weapons, resolution status, relationship dynamics, and forecasting.</p>
+          <h3>Sales Performance &amp; Internet Sales Analysis</h3>
+          <p class="project-summary">Interactive Power BI Sales Dashboard using SQL and AdventureWorks data to analyze sales by customer, product, category, location, and time.</p>
           <div class="project-actions">
-            <button class="project-detail-button" type="button" data-project-title="Crime Statistics & Analysis Report" data-project-description="This project delivers an in-depth analysis of crime incidents reported by the Anchorage Municipal Police Department spanning 1980 to 2014, using data sourced from the FBI. Built entirely in Power BI, the report explores crime types, victim and perpetrator demographics, relationships, weapons used, and time-based trends through interactive dashboards. Key analysis sections cover demographic breakdowns, monthly and yearly crime patterns, resolution status, and the relationship dynamics between victims and perpetrators. The project also incorporates a crime incident forecast using historical data to identify future trends, providing law enforcement and policymakers with actionable intelligence to guide targeted public safety interventions.">View Details</button>
-            <a class="project-link" href="assets/projects/Crime%20Stats%20and%20Analytics%20Report.pbix" target="_blank" rel="noopener">View My Project</a>
+            <button class="project-detail-button" type="button" data-project-title="Sales Performance &amp; Internet Sales Analysis" data-project-gallery="sales-performance" data-project-description="Built an interactive Power BI sales analytics dashboard to transform static internet sales reports into a dynamic, decision-ready reporting solution. Using SQL and the AdventureWorksDW2019 dataset, I developed a streamlined dimensional data model with Calendar, Customer, Product, and Internet Sales tables, applying data cleansing, transformations, joins, and dynamic date filtering. The dashboard enables stakeholders to analyze sales performance by product, customer, salesperson, location, category, and time, while interactive filters allow users to drill into specific business segments. I also incorporated budget vs. actual sales analysis to track performance against targets and identify trends over time. The final dashboard provides both high-level KPIs and detailed monthly/customer-level insights to support faster and more informed sales decisions.">View Details</button>
           </div>
         </article>
         <div class="project-stack">
@@ -235,6 +234,7 @@
         <button class="project-modal-close" type="button" aria-label="Close project details" data-project-modal-close>&times;</button>
         <h3 id="project-modal-title"></h3>
         <p id="project-modal-description"></p>
+        <div class="project-modal-gallery" id="project-modal-gallery"></div>
       </div>
     </div>
 
@@ -480,7 +480,7 @@
 <footer>
     <p>&copy; <span id="year"></span> Shreyas C Vaddarahalli. All rights reserved.</p>
   </footer>
-<script src="script.js?v=51"></script>
+<script src="script.js?v=52"></script>
 </body>
 </html>
 
