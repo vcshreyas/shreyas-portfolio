@@ -213,6 +213,27 @@ contentTabs.forEach((tab) => {
   });
 });
 
+const projectTabButtons = document.querySelectorAll("[data-project-tab]");
+const projectTabPanels = document.querySelectorAll("[data-project-panel]");
+
+projectTabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const target = button.dataset.projectTab;
+
+    projectTabButtons.forEach((tab) => {
+      const isActive = tab === button;
+      tab.classList.toggle("active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+
+    projectTabPanels.forEach((panel) => {
+      const isActive = panel.dataset.projectPanel === target;
+      panel.classList.toggle("active", isActive);
+      panel.hidden = !isActive;
+    });
+  });
+});
+
 const projectModal = document.querySelector("#project-modal");
 const projectModalTitle = document.querySelector("#project-modal-title");
 const projectModalDescription = document.querySelector("#project-modal-description");
