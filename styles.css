@@ -7138,7 +7138,7 @@ footer {
 }
 
 #projects .project-selector {
-  min-height: 430px !important;
+  min-height: 0 !important;
   background: transparent !important;
   border: 0 !important;
   box-shadow: none !important;
@@ -7176,7 +7176,7 @@ footer {
 }
 
 #projects .project-detail-panel {
-  height: 520px !important;
+  height: 390px !important;
   overflow-y: auto !important;
   background: rgba(255, 255, 255, 0.92) !important;
   color: var(--text) !important;
@@ -7235,7 +7235,7 @@ footer {
 
   #projects .project-detail-panel {
     height: auto !important;
-    min-height: 420px !important;
+    min-height: 0 !important;
     overflow-y: visible !important;
     padding-left: 16px !important;
     padding-right: 16px !important;
