@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=129">
+  <link rel="stylesheet" href="styles.css?v=130">
 </head>
 <body>
   <header class="site-header">
@@ -199,19 +199,27 @@
       <div class="project-showcase" data-project-tabs>
         <div class="project-selector" role="tablist" aria-label="Academic project selector">
           <button class="project-selector-item active" type="button" role="tab" aria-selected="true" aria-controls="project-panel-shopeasy" data-project-tab="shopeasy">
-            <span class="project-selector-icon">SE</span>
+            <span class="project-selector-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 7h15l-2 8H8L6 3H3"/><circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/><path d="M10 11h6"/></svg>
+            </span>
             <span>ShopEasy Marketing Analytics</span>
           </button>
           <button class="project-selector-item" type="button" role="tab" aria-selected="false" aria-controls="project-panel-sales" data-project-tab="sales">
-            <span class="project-selector-icon">SP</span>
+            <span class="project-selector-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-5"/><path d="M12 16V8"/><path d="M16 16v-9"/><path d="M20 16v-3"/></svg>
+            </span>
             <span>Sales Performance</span>
           </button>
           <button class="project-selector-item" type="button" role="tab" aria-selected="false" aria-controls="project-panel-british" data-project-tab="british">
-            <span class="project-selector-icon">BA</span>
+            <span class="project-selector-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 12h18"/><path d="M12 3l7 9-7 9-7-9 7-9z"/><path d="M8 12c1.2-2 2.5-3 4-3s2.8 1 4 3c-1.2 2-2.5 3-4 3s-2.8-1-4-3z"/></svg>
+            </span>
             <span>British Airways Review</span>
           </button>
           <button class="project-selector-item" type="button" role="tab" aria-selected="false" aria-controls="project-panel-crime" data-project-tab="crime">
-            <span class="project-selector-icon">CS</span>
+            <span class="project-selector-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.6-2.8 8.3-7 10-4.2-1.7-7-5.4-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            </span>
             <span>Crime Statistics Report</span>
           </button>
         </div>
@@ -219,7 +227,7 @@
           <article class="project-detail-panel active" id="project-panel-shopeasy" role="tabpanel" data-project-panel="shopeasy">
             <div class="card-top"><span>01</span><span>MS Excel | SQL | Python | Power BI</span></div>
             <h3>ShopEasy Marketing Analytics</h3>
-            <p>End-to-end marketing performance analysis using SQL, Python, and Power BI to identify funnel drop-offs, content engagement drivers, and customer sentiment themes.</p>
+            <p>ShopEasy, an online retail brand, was facing declining customer engagement, falling conversion rates, and poor returns on heavy marketing spend. Using SQL to extract and query campaign data, Python for exploratory and sentiment analysis, and Power BI to build interactive dashboards, I conducted an end-to-end marketing performance analysis. The project focused on identifying drop-off points in the conversion funnel, evaluating which content types drove the highest engagement, and mining customer reviews to uncover recurring themes. The outcome was a clear, data-backed roadmap highlighting exactly where ShopEasy's marketing was breaking down and how to fix it.</p>
             <div class="project-actions">
               <button class="project-detail-button" type="button" data-project-title="ShopEasy Marketing Analytics" data-project-description="ShopEasy, an online retail brand, was facing declining customer engagement, falling conversion rates, and poor returns on heavy marketing spend. Using SQL to extract and query campaign data, Python for exploratory and sentiment analysis, and Power BI to build interactive dashboards, I conducted an end-to-end marketing performance analysis. The project focused on identifying drop-off points in the conversion funnel, evaluating which content types drove the highest engagement, and mining customer reviews to uncover recurring themes. The outcome was a clear, data-backed roadmap highlighting exactly where ShopEasy's marketing was breaking down and how to fix it.">View Details</button>
               <a class="project-link" href="assets/projects/Marketing%20Analytics%20Project.pbix" target="_blank" rel="noopener">View My Project</a>
@@ -228,7 +236,7 @@
           <article class="project-detail-panel" id="project-panel-sales" role="tabpanel" data-project-panel="sales" hidden>
             <div class="card-top"><span>02</span><span>MS Excel | SQL | Power BI</span></div>
             <h3>Sales Performance &amp; Internet Sales Analysis</h3>
-            <p>Interactive Power BI Sales Dashboard using SQL and AdventureWorks data to analyze sales by customer, product, category, location, and time.</p>
+            <p>Built an interactive Power BI sales analytics dashboard to transform static internet sales reports into a dynamic, decision-ready reporting solution. Using SQL and the AdventureWorksDW2019 dataset, I developed a streamlined dimensional data model with Calendar, Customer, Product, and Internet Sales tables, applying data cleansing, transformations, joins, and dynamic date filtering. The dashboard enables stakeholders to analyze sales performance by product, customer, salesperson, location, category, and time, while interactive filters allow users to drill into specific business segments. I also incorporated budget vs. actual sales analysis to track performance against targets and identify trends over time. The final dashboard provides both high-level KPIs and detailed monthly/customer-level insights to support faster and more informed sales decisions.</p>
             <div class="project-actions">
               <button class="project-detail-button" type="button" data-project-title="Sales Performance &amp; Internet Sales Analysis" data-project-gallery="sales-performance" data-project-description="Built an interactive Power BI sales analytics dashboard to transform static internet sales reports into a dynamic, decision-ready reporting solution. Using SQL and the AdventureWorksDW2019 dataset, I developed a streamlined dimensional data model with Calendar, Customer, Product, and Internet Sales tables, applying data cleansing, transformations, joins, and dynamic date filtering. The dashboard enables stakeholders to analyze sales performance by product, customer, salesperson, location, category, and time, while interactive filters allow users to drill into specific business segments. I also incorporated budget vs. actual sales analysis to track performance against targets and identify trends over time. The final dashboard provides both high-level KPIs and detailed monthly/customer-level insights to support faster and more informed sales decisions.">View Details</button>
             </div>
@@ -236,7 +244,7 @@
           <article class="project-detail-panel" id="project-panel-british" role="tabpanel" data-project-panel="british" hidden>
             <div class="card-top"><span>03</span><span>MS Excel | Tableau</span></div>
             <h3>British Airways Review Analysis</h3>
-            <p>Tableau analysis of British Airways customer feedback, surfacing sentiment patterns, service themes, travel-class differences, time trends, and regional performance gaps.</p>
+            <p>This project analyzes British Airways customer feedback data to uncover actionable insights around service quality and passenger satisfaction, built entirely in Tableau. The dashboards explore sentiment across positive, neutral, and negative categories, identifying recurring themes such as flight comfort and punctuality in favorable reviews, and customer service delays and baggage handling in critical ones. The analysis also breaks down experiences by travel class, revealing notably higher satisfaction among Business and First Class passengers compared to Economy. Temporal trend analysis highlights how sentiment shifts over time, while a geographical breakdown surfaces regional performance differences across routes, giving British Airways a comprehensive, data-driven view of where the passenger experience excels and where it needs attention.</p>
             <div class="project-actions">
               <button class="project-detail-button" type="button" data-project-title="British Airways Review Analysis" data-project-description="This project analyzes British Airways customer feedback data to uncover actionable insights around service quality and passenger satisfaction, built entirely in Tableau. The dashboards explore sentiment across positive, neutral, and negative categories, identifying recurring themes such as flight comfort and punctuality in favorable reviews, and customer service delays and baggage handling in critical ones. The analysis also breaks down experiences by travel class, revealing notably higher satisfaction among Business and First Class passengers compared to Economy. Temporal trend analysis highlights how sentiment shifts over time, while a geographical breakdown surfaces regional performance differences across routes, giving British Airways a comprehensive, data-driven view of where the passenger experience excels and where it needs attention.">View Details</button>
               <a class="project-link" href="assets/projects/British%20Airways%20Review.twb" target="_blank" rel="noopener">View My Project</a>
@@ -245,7 +253,7 @@
           <article class="project-detail-panel" id="project-panel-crime" role="tabpanel" data-project-panel="crime" hidden>
             <div class="card-top"><span>04</span><span>MS Excel | SQL | Power BI</span></div>
             <h3>Crime Statistics &amp; Analysis Report</h3>
-            <p>Power BI crime analytics report exploring incident trends, demographics, weapons, resolution status, relationship dynamics, and forecasting.</p>
+            <p>This project delivers an in-depth analysis of crime incidents reported by the Anchorage Municipal Police Department spanning 1980 to 2014, using data sourced from the FBI. Built entirely in Power BI, the report explores crime types, victim and perpetrator demographics, relationships, weapons used, and time-based trends through interactive dashboards. Key analysis sections cover demographic breakdowns, monthly and yearly crime patterns, resolution status, and the relationship dynamics between victims and perpetrators. The project also incorporates a crime incident forecast using historical data to identify future trends, providing law enforcement and policymakers with actionable intelligence to guide targeted public safety interventions.</p>
             <div class="project-actions">
               <button class="project-detail-button" type="button" data-project-title="Crime Statistics &amp; Analysis Report" data-project-description="This project delivers an in-depth analysis of crime incidents reported by the Anchorage Municipal Police Department spanning 1980 to 2014, using data sourced from the FBI. Built entirely in Power BI, the report explores crime types, victim and perpetrator demographics, relationships, weapons used, and time-based trends through interactive dashboards. Key analysis sections cover demographic breakdowns, monthly and yearly crime patterns, resolution status, and the relationship dynamics between victims and perpetrators. The project also incorporates a crime incident forecast using historical data to identify future trends, providing law enforcement and policymakers with actionable intelligence to guide targeted public safety interventions.">View Details</button>
               <a class="project-link" href="assets/projects/Crime%20Stats%20and%20Analytics%20Report.pbix" target="_blank" rel="noopener">View My Project</a>
