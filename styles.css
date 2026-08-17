@@ -7176,10 +7176,12 @@ footer {
 }
 
 #projects .project-detail-panel {
+  height: 520px !important;
+  overflow-y: auto !important;
   background: rgba(255, 255, 255, 0.92) !important;
   color: var(--text) !important;
-  border-color: rgba(190, 213, 238, 0.9) !important;
-  box-shadow: 0 22px 54px rgba(27, 73, 118, 0.11) !important;
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
 #projects .project-detail-panel .card-top {
@@ -7205,4 +7207,44 @@ footer {
 
 #projects .project-detail-panel .project-detail-button:hover {
   background: rgba(20, 118, 230, 0.08) !important;
+}
+
+#projects .plane-project-icon svg {
+  fill: currentColor !important;
+  stroke: none !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+@media (max-width: 760px) {
+  #projects .project-showcase,
+  #projects .project-selector,
+  #projects .project-detail-panels,
+  #projects .project-detail-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  #projects .project-showcase {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: transparent !important;
+  }
+
+  #projects .project-detail-panel {
+    height: auto !important;
+    min-height: 420px !important;
+    overflow-y: visible !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  #projects .project-detail-panel .card-top {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    white-space: normal !important;
+  }
 }
