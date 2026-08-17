@@ -216,8 +216,27 @@ contentTabs.forEach((tab) => {
 const projectModal = document.querySelector("#project-modal");
 const projectModalTitle = document.querySelector("#project-modal-title");
 const projectModalDescription = document.querySelector("#project-modal-description");
+const projectModalGallery = document.querySelector("#project-modal-gallery");
 const projectDetailButtons = document.querySelectorAll(".project-detail-button");
 let lastProjectTrigger = null;
+
+const projectGalleries = {
+  "sales-performance": [
+    {
+      src: "assets/projects/sales-performance/sales-overview.jpeg",
+      alt: "Sales Overview Power BI dashboard"
+    },
+    {
+      src: "assets/projects/sales-performance/customer-details.jpeg",
+      alt: "Customer Details Power BI dashboard"
+    },
+    {
+      src: "assets/projects/sales-performance/data-model.jpeg",
+      alt: "Sales Performance Power BI data model",
+      wide: true
+    }
+  ]
+};
 
 function closeProjectModal() {
   if (!projectModal) {
@@ -239,6 +258,26 @@ projectDetailButtons.forEach((button) => {
     lastProjectTrigger = button;
     projectModalTitle.textContent = button.dataset.projectTitle || "";
     projectModalDescription.textContent = button.dataset.projectDescription || "";
+
+    if (projectModalGallery) {
+      const galleryItems = projectGalleries[button.dataset.projectGallery] || [];
+      projectModalGallery.replaceChildren();
+      projectModalGallery.hidden = galleryItems.length === 0;
+
+      galleryItems.forEach((item) => {
+        const figure = document.createElement("figure");
+        figure.className = item.wide ? "project-gallery-item project-gallery-item-wide" : "project-gallery-item";
+
+        const image = document.createElement("img");
+        image.src = item.src;
+        image.alt = item.alt;
+        image.loading = "lazy";
+
+        figure.append(image);
+        projectModalGallery.append(figure);
+      });
+    }
+
     projectModal.classList.add("is-open");
     projectModal.setAttribute("aria-hidden", "false");
     document.body.classList.add("modal-open");
