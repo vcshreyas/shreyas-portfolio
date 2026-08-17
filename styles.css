@@ -7126,3 +7126,79 @@ footer {
     overflow: hidden !important;
   }
 }
+
+/* Final project showcase light theme */
+#projects .project-showcase {
+  background: linear-gradient(135deg, rgba(239, 247, 255, 0.98), rgba(255, 255, 255, 0.92)) !important;
+  border: 1px solid rgba(190, 213, 238, 0.72) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 24px 58px rgba(27, 73, 118, 0.1) !important;
+}
+
+#projects .project-selector {
+  background: rgba(255, 255, 255, 0.84) !important;
+  border-color: rgba(190, 213, 238, 0.86) !important;
+  box-shadow: 0 18px 44px rgba(27, 73, 118, 0.1) !important;
+}
+
+#projects .project-selector-item {
+  background: #ffffff !important;
+  color: var(--text) !important;
+  border-color: rgba(190, 213, 238, 0.9) !important;
+  box-shadow: 0 10px 24px rgba(27, 73, 118, 0.07) !important;
+}
+
+#projects .project-selector-item:hover,
+#projects .project-selector-item.active {
+  background: linear-gradient(135deg, #eaf5ff, #ffffff) !important;
+  border-color: rgba(20, 118, 230, 0.46) !important;
+  box-shadow: 0 18px 36px rgba(20, 118, 230, 0.16) !important;
+}
+
+#projects .project-selector-icon {
+  background: #e8f4ff !important;
+  color: #1476e6 !important;
+  border: 1px solid rgba(20, 118, 230, 0.16) !important;
+}
+
+#projects .project-selector-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#projects .project-detail-panel {
+  background: rgba(255, 255, 255, 0.92) !important;
+  color: var(--text) !important;
+  border-color: rgba(190, 213, 238, 0.9) !important;
+  box-shadow: 0 22px 54px rgba(27, 73, 118, 0.11) !important;
+}
+
+#projects .project-detail-panel .card-top {
+  color: #006de6 !important;
+}
+
+#projects .project-detail-panel h3 {
+  color: var(--text) !important;
+}
+
+#projects .project-detail-panel p {
+  max-width: none !important;
+  color: var(--muted) !important;
+  font-size: clamp(1rem, 1.25vw, 1.12rem) !important;
+  line-height: 1.62 !important;
+}
+
+#projects .project-detail-panel .project-detail-button {
+  background: #ffffff !important;
+  color: #006de6 !important;
+  border-color: rgba(0, 109, 230, 0.72) !important;
+}
+
+#projects .project-detail-panel .project-detail-button:hover {
+  background: rgba(20, 118, 230, 0.08) !important;
+}
