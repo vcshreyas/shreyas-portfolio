@@ -262,6 +262,24 @@ const projectGalleries = {
       alt: "Sales Performance Power BI data model",
       wide: true
     }
+  ],
+  "crime-statistics": [
+    {
+      heading: "Dashboards:"
+    },
+    {
+      src: "assets/projects/crime-statistics/crime-dashboard.jpeg",
+      alt: "Crime Statistics Power BI dashboard",
+      wide: true
+    },
+    {
+      heading: "Data Module:"
+    },
+    {
+      src: "assets/projects/crime-statistics/crime-data-model.jpeg",
+      alt: "Crime Statistics Power BI data model",
+      wide: true
+    }
   ]
 };
 
