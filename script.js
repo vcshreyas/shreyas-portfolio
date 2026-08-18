@@ -242,6 +242,27 @@ const projectDetailButtons = document.querySelectorAll(".project-detail-button")
 let lastProjectTrigger = null;
 
 const projectGalleries = {
+  "shopeasy": [
+    {
+      heading: "Dashboards:"
+    },
+    {
+      src: "assets/projects/shopeasy/overview-dashboard.jpeg",
+      alt: "ShopEasy marketing overview dashboard"
+    },
+    {
+      src: "assets/projects/shopeasy/customer-review-dashboard.jpeg",
+      alt: "ShopEasy customer review details dashboard"
+    },
+    {
+      heading: "Data Module:"
+    },
+    {
+      src: "assets/projects/shopeasy/data-model.jpeg",
+      alt: "ShopEasy Power BI data model",
+      wide: true
+    }
+  ],
   "sales-performance": [
     {
       heading: "Dashboards:"
