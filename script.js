@@ -255,7 +255,7 @@ const projectGalleries = {
       alt: "ShopEasy customer review details dashboard"
     },
     {
-      heading: "Data Module:"
+      heading: "Data Model:"
     },
     {
       src: "assets/projects/shopeasy/data-model.jpeg",
@@ -276,7 +276,7 @@ const projectGalleries = {
       alt: "Customer Details Power BI dashboard"
     },
     {
-      heading: "Data Module:"
+      heading: "Data Model:"
     },
     {
       src: "assets/projects/sales-performance/data-model.jpeg",
@@ -294,7 +294,7 @@ const projectGalleries = {
       wide: true
     },
     {
-      heading: "Data Module:"
+      heading: "Data Model:"
     },
     {
       src: "assets/projects/crime-statistics/crime-data-model.jpeg",
