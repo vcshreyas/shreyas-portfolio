@@ -7131,6 +7131,8 @@ footer {
 
 /* Final project showcase light theme */
 #projects .project-showcase {
+  gap: 18px !important;
+  padding: 0 !important;
   background: linear-gradient(135deg, rgba(239, 247, 255, 0.98), rgba(255, 255, 255, 0.92)) !important;
   border: 0 !important;
   border-radius: 16px !important;
@@ -7138,6 +7140,7 @@ footer {
 }
 
 #projects .project-selector {
+  padding: 0 !important;
   min-height: 0 !important;
   background: transparent !important;
   border: 0 !important;
@@ -7182,6 +7185,8 @@ footer {
   color: var(--text) !important;
   border: 0 !important;
   box-shadow: none !important;
+  padding-left: 28px !important;
+  padding-right: 28px !important;
 }
 
 #projects .project-detail-panel .card-top {
@@ -7230,6 +7235,7 @@ footer {
   #projects .project-showcase {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    gap: 14px !important;
     background: transparent !important;
   }
 
