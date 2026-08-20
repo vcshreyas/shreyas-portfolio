@@ -301,6 +301,24 @@ const projectGalleries = {
       alt: "Crime Statistics Power BI data model",
       wide: true
     }
+  ],
+  "british-airways": [
+    {
+      heading: "Dashboards:"
+    },
+    {
+      src: "assets/projects/british-airways/dashboard.jpeg",
+      alt: "British Airways Tableau review dashboard",
+      wide: true
+    },
+    {
+      heading: "Data Source:"
+    },
+    {
+      src: "assets/projects/british-airways/data-source.jpeg",
+      alt: "British Airways Tableau data source",
+      wide: true
+    }
   ]
 };
 
