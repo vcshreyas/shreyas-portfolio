@@ -5822,6 +5822,51 @@ body {
   flex-basis: 92px !important;
 }
 
+#experience .experience-logo-link {
+  grid-column: 1 !important;
+  grid-row: 1 / span 2 !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 88px !important;
+  height: 88px !important;
+  align-self: start !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  border-radius: 16px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: transform 180ms ease, filter 180ms ease !important;
+}
+
+#experience .experience-logo-link-wide {
+  width: 92px !important;
+}
+
+#experience .experience-logo-link:hover {
+  transform: translateY(-2px) scale(1.04) !important;
+  filter: drop-shadow(0 8px 12px rgba(15, 31, 56, 0.16));
+}
+
+#experience .experience-logo-link:focus-visible {
+  outline: 3px solid rgba(0, 105, 224, 0.42) !important;
+  outline-offset: 3px !important;
+}
+
+#experience .experience-logo-link .experience-logo,
+#experience .experience-logo-link .experience-logo-wide {
+  grid-column: auto !important;
+  grid-row: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  flex-basis: auto !important;
+  padding: 0 !important;
+  object-fit: contain !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
 #experience .timeline-date {
   grid-column: 3 !important;
   grid-row: 1 !important;
@@ -5877,6 +5922,14 @@ body {
     width: 70px !important;
     height: 70px !important;
     flex-basis: 70px !important;
+  }
+
+  #experience .experience-logo-link,
+  #experience .experience-logo-link-wide {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    width: 70px !important;
+    height: 70px !important;
   }
 
   #experience .experience-card-body {
